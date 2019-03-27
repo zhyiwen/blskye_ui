@@ -1,0 +1,65 @@
+<template>
+  <div class="bl-nav">
+    <div class="nav-logo">
+      <img
+        src="../../assets/img/logo.png"
+        alt=""
+      >
+    </div>
+    <ul class="nav-menu">
+      <li>
+        <router-link to="/"><i class="fa fa-home fa-fw"></i><span>首页</span></router-link>
+      </li>
+      <li>
+        <router-link to="/timeline"><i class="fa fa-sitemap fa-fw"></i><span>时间轴</span></router-link>
+      </li>
+      <li>
+        <router-link to="/table"><i class="fa fa-table fa-fw"></i><span>表格</span></router-link>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.bl-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  background: #8a69c4;
+  background: linear-gradient(to bottom, #8a69c4, #463a74);
+  text-align: left;
+  .nav-menu {
+    box-sizing: border-box;
+    padding: 10px;
+    li {
+      font-size: 1rem;
+      a {
+        display: block;
+        padding: 10px 5px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #c6b9e6;
+        .fa {
+          margin-left: 10px;
+          margin-right: 5px;
+        }
+        &.router-link-exact-active {
+          background: rgba($color: #fff, $alpha: 0.2);
+          color: #fff;
+        }
+      }
+    }
+  }
+  .nav-logo {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+</style>
+

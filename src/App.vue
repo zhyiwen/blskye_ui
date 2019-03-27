@@ -1,12 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <bl-nav></bl-nav>
+    <div class="bl-content">
+      <div class="page">
+        <router-view/>
+      </div>
+    </div>
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view/> -->
   </div>
 </template>
+
+<script>
+import BlNav from '@/components/frame/BlNav.vue'
+
+export default {
+  components:{
+    BlNav
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {
@@ -16,14 +33,11 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.bl-content{
+  padding-left: 250px;
+  .page{
+    background: #fff;
+    padding: 10px;
   }
 }
 </style>
