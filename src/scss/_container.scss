@@ -1,0 +1,35 @@
+.bl-container,
+.bl-container-fluid,
+.bl-container-fixed,
+.bl-container-fixed-md,
+.bl-container-fixed-sm,
+.bl-container-fixed-xs {
+  @extend .bl-clearfix;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.bl-container {
+  @media (min-width: 768px) {
+    max-width: 740px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1160px;
+  }
+}
+.bl-container-fixed {
+  width: 1160px;
+}
+.bl-container-fixed-md {
+  width: 960px;
+}
+.bl-container-fixed-sm {
+  width: 740px;
+}
+.bl-container-fixed-xs {
+  width: 440px;
+}

@@ -11,6 +11,12 @@
         <router-link to="/"><i class="fa fa-home fa-fw"></i><span>首页</span></router-link>
       </li>
       <li>
+        <router-link to="/grid"><i class="fa fa-desktop fa-fw"></i><span>响应式设计</span></router-link>
+      </li>
+      <li>
+        <router-link to="/text"><i class="fa fa-font fa-fw"></i><span>文字排版</span></router-link>
+      </li>
+      <li>
         <router-link to="/timeline"><i class="fa fa-sitemap fa-fw"></i><span>时间轴</span></router-link>
       </li>
       <li>
@@ -31,6 +37,9 @@
   background: linear-gradient(to bottom, #8a69c4, #463a74);
   text-align: left;
   .nav-menu {
+    margin: 0;
+    height: calc(100% - 90px);
+    overflow: auto;
     box-sizing: border-box;
     padding: 10px;
     li {
