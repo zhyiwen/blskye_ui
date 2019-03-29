@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Grid from './views/BlGrid.vue'
 import Text from './views/BlText.vue'
+import Btn from './views/BlBtn.vue'
+import Tags from './views/BlTags.vue'
+import List from './views/BlList.vue'
 import Timeline from './views/BlTimeline.vue'
 import Table from './views/BlTable.vue'
 
@@ -24,6 +27,21 @@ export default new Router({
       path: "/text",
       name: "text",
       component: Text
+    },
+    {
+      path: "/btn",
+      name: "btn",
+      component: Btn
+    },
+    {
+      path: "/tags",
+      name: "tags",
+      component: Tags
+    },
+    {
+      path: "/list",
+      name: "list",
+      component: List
     },
     {
       path: "/timeline",

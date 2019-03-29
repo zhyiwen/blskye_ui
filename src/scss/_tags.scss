@@ -1,0 +1,90 @@
+.bl-tag {
+  display: inline;
+  padding: 0px 5px;
+  font-size: 0.6rem;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: grey;
+  border-radius: 4px;
+  &.bl-tag-outline {
+    color: grey;
+    background: 0 0;
+    border: 1px solid grey;
+  }
+  &.bl-tag-circle {
+    border-radius: 50px;
+  }
+  &.bl-tag-primary {
+    background-color: #3280fc;
+    &.bl-tag-outline {
+      color: #3280fc;
+      background: 0 0;
+      border: 1px solid #3280fc;
+    }
+  }
+  &.bl-tag-success {
+    background-color: #38b03f;
+    &.bl-tag-outline {
+      color: #38b03f;
+      background: 0 0;
+      border: 1px solid #38b03f;
+    }
+  }
+  &.bl-tag-info {
+    background-color: #03b8cf;
+    &.bl-tag-outline {
+      color: #03b8cf;
+      background: 0 0;
+      border: 1px solid #03b8cf;
+    }
+  }
+  &.bl-tag-warning {
+    background-color: #f1a325;
+    &.bl-tag-outline {
+      color: #f1a325;
+      background: 0 0;
+      border: 1px solid #f1a325;
+    }
+  }
+  &.bl-tag-danger {
+    background-color: #ea644a;
+    &.bl-tag-outline {
+      color: #ea644a;
+      background: 0 0;
+      border: 1px solid #ea644a;
+    }
+  }
+  &.bl-tag-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    line-height: 20px;
+    text-indent: -9999em;
+    border-radius: 50%;
+  }
+}
+.bl-tag-add,
+.bl-tag-close {
+  position: relative;
+  .fa {
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+  }
+}
+.bl-tag-add {
+  padding-left: 20px;
+  .fa-plus {
+    left: 6px;
+  }
+}
+.bl-tag-close {
+  padding-right: 20px;
+  .fa-close {
+    right: 6px;
+  }
+}

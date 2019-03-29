@@ -17,6 +17,15 @@
         <router-link to="/text"><i class="fa fa-font fa-fw"></i><span>文字排版</span></router-link>
       </li>
       <li>
+        <router-link to="/btn"><i class="fa fa-bold fa-fw"></i><span>按钮</span></router-link>
+      </li>
+      <li>
+        <router-link to="/tags"><i class="fa fa-tag fa-fw"></i><span>标签</span></router-link>
+      </li>
+      <li>
+        <router-link to="/list"><i class="fa fa-list fa-fw"></i><span>列表</span></router-link>
+      </li>
+      <li>
         <router-link to="/timeline"><i class="fa fa-sitemap fa-fw"></i><span>时间轴</span></router-link>
       </li>
       <li>
