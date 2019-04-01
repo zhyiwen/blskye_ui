@@ -24,7 +24,10 @@
 </template>
 <style lang="scss" scoped>
 .bl-tag{
+  display: inline-block;
   margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 4px 6px;
 }
 </style>
 

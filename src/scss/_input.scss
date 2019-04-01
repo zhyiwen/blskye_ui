@@ -1,0 +1,112 @@
+.bl-input {
+    box-sizing: border-box;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 5px 8px;
+    width: 230px;
+        line-height: 1.53846154;
+    font-size: 13px;
+    color: #222;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    transition: all 0.3s;
+    &.bl-input-block{
+        display: block;
+        margin-bottom: 10px;
+        width: 100% !important;
+    }
+    &.bl-input-circle{
+        border-radius: 50px;
+    }
+    &:focus{
+        border-color: #8a69c4;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.bl-form-ico{
+    position: relative;
+    display: inline-block;
+    .fa{
+        cursor: pointer;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        top: 1px;
+        text-align: center;
+        color: #353535;
+        opacity: 0.5;
+        transition: all 0.3s;
+        z-index: 10;
+        &.fa-left{
+            left: 1px;
+            &~input[type="text"], input[type="password"], input[type="number"]{padding-left: 30px;}
+        }
+        &.fa-right{
+            right: 1px;
+            &~input[type="text"], input[type="password"], input[type="number"]{padding-right: 30px;}
+        }
+    }
+}
+// input, textarea{
+//     &::-webkit-input-placeholder{color: $form-borc;}
+//     &:-moz-placeholder{color: $form-borc;}
+//     &::-moz-placeholder{color: $form-borc;}
+//     &:-ms-input-placeholder{color: $form-borc;}
+// }
+.bl-text{
+    .fa-left{
+        left: 10px;
+        &~input[type="text"], input[type="password"], input[type="number"]{padding-left: 30px;}
+    }
+    .fa-right{
+        right: 10px;
+        &~input[type="text"], input[type="password"], input[type="number"]{padding-right: 30px;}
+    }
+}
+
+.bl-input-group{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    .bl-input-group-l, .bl-input-group-r {
+        display: flex;
+        z-index: 2;
+        .bl-input-group-text{
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            line-height: 1.3;
+            color: #333;
+            text-align: center;
+            white-space: nowrap;
+            background-color: #fff;
+            border: 1px solid #dedede;
+            border-radius: 4px;
+        }
+        .bl-dropdown .bl-dropdown-toggle, select{
+            width: auto;
+        }
+    }
+    .bl-input-group-l{
+        margin-right: -2px;
+        .bl-input-group-text, .bl-btn, .bl-dropdown .bl-dropdown-toggle, select{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    .bl-input-group-r{
+        margin-left: -2px;
+        .bl-input-group-text, .bl-btn, .bl-dropdown, select{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}

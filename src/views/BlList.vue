@@ -59,4 +59,7 @@
   display: inline-block;
   padding: 2px 0px;
 }
+.bl-list-group {
+  margin-bottom: 10px;
+}
 </style>

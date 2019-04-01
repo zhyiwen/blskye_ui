@@ -8,6 +8,8 @@ import Tags from './views/BlTags.vue'
 import List from './views/BlList.vue'
 import Timeline from './views/BlTimeline.vue'
 import Table from './views/BlTable.vue'
+import Input from './views/BlInput.vue'
+import Todolist from './views/BlTodolist.vue'
 
 Vue.use(Router)
 
@@ -44,9 +46,19 @@ export default new Router({
       component: List
     },
     {
+      path: "/input",
+      name: "input",
+      component: Input
+    },
+    {
       path: "/timeline",
       name: "timeline",
       component: Timeline
+    },
+    {
+      path: "/todolist",
+      name: "todolist",
+      component: Todolist
     },
     {
       path: "/table",

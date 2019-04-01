@@ -20,6 +20,9 @@
         <router-link to="/btn"><i class="fa fa-bold fa-fw"></i><span>按钮</span></router-link>
       </li>
       <li>
+        <router-link to="/input"><i class="fa fa-pencil fa-fw"></i><span>输入框</span></router-link>
+      </li>
+      <li>
         <router-link to="/tags"><i class="fa fa-tag fa-fw"></i><span>标签</span></router-link>
       </li>
       <li>
@@ -30,6 +33,9 @@
       </li>
       <li>
         <router-link to="/table"><i class="fa fa-table fa-fw"></i><span>表格</span></router-link>
+      </li>
+      <li>
+        <router-link to="/todolist"><i class="fa fa-list-alt fa-fw"></i><span>todolist</span></router-link>
       </li>
     </ul>
   </div>

@@ -1,0 +1,29 @@
+.bl-todolist {
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  .bl-todolist-hd {
+    padding: 10px;
+    border-bottom: 1px solid #dedede;
+    background: #fcfcfc;
+    .bl-btn {
+      width: 66px;
+    }
+    .bl-input {
+      width: calc(100% - 66px);
+    }
+  }
+  .bl-todolist-bd {
+    padding: 10px;
+  }
+  .checkbox {
+    padding-left: 8px;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    input[type="checkbox"]:checked + label {
+      color: #ccc;
+      text-decoration: line-through;
+    }
+  }
+}
