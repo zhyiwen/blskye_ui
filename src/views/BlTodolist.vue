@@ -7,6 +7,7 @@
           class="bl-input"
           placeholder="请输入关键字"
           v-model="inputValue"
+          @keyup.enter="handleSubmit"
         >
         <div class="bl-input-group-r">
           <button class="bl-btn bl-btn-primary" @click="handleSubmit">搜索</button>
