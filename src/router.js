@@ -6,6 +6,7 @@ import Text from './views/BlText.vue'
 import Btn from './views/BlBtn.vue'
 import Tags from './views/BlTags.vue'
 import List from './views/BlList.vue'
+import Panel from './views/BlPanel.vue'
 import Timeline from './views/BlTimeline.vue'
 import Table from './views/BlTable.vue'
 import Input from './views/BlInput.vue'
@@ -44,6 +45,11 @@ export default new Router({
       path: "/list",
       name: "list",
       component: List
+    },
+    {
+      path: "/panel",
+      name: "panel",
+      component: Panel
     },
     {
       path: "/input",

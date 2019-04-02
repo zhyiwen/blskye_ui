@@ -29,6 +29,9 @@
         <router-link to="/list"><i class="fa fa-list fa-fw"></i><span>列表</span></router-link>
       </li>
       <li>
+        <router-link to="/panel"><i class="fa fa-columns fa-fw"></i><span>面板</span></router-link>
+      </li>
+      <li>
         <router-link to="/timeline"><i class="fa fa-sitemap fa-fw"></i><span>时间轴</span></router-link>
       </li>
       <li>
