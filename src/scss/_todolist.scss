@@ -25,5 +25,13 @@
       color: #ccc;
       text-decoration: line-through;
     }
+    label {
+      &::before {
+        // top: 1px;
+      }
+      &::after {
+        padding-top: 3px;
+      }
+    }
   }
 }
