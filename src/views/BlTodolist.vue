@@ -17,7 +17,7 @@
     <div class="bl-todolist-bd">
       <ul class="bl-list-group bl-list-group-hover">
         <li class="bl-list-group-item" v-for="(item,index) of list" :key="index">
-          <div class="checkbox">
+          <div class="checkbox checkbox-info">
             <input
               type="checkbox"
               :id="'checkbox'+index"

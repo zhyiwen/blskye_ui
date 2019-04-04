@@ -14,7 +14,7 @@
         <td><a href="javascript:;">John Brown</a></td>
         <td>32</td>
         <td>New York No. 1 Lake Park</td>
-        <td><span class="bl-tag bl-tag-solid-deepskyblue">nice</span><span class="bl-tag bl-tag-solid-deepskyblue">developer</span></td>
+        <td><span class="bl-tag bl-tag-info bl-tag-outline">nice</span><span class="bl-tag bl-tag-info bl-tag-outline">developer</span></td>
         <td>
           <a href="javascript:;">edit</a>
           <div class="bl-table-divider"></div>
@@ -25,7 +25,7 @@
         <td><a href="javascript:;">Jim Green</a></td>
         <td>42</td>
         <td>London No. 1 Lake Park</td>
-        <td><span class="bl-tag bl-tag-solid-deepskyblue">loser</span></td>
+        <td><span class="bl-tag bl-tag-info bl-tag-outline">loser</span></td>
         <td>
           <a href="javascript:;">edit</a>
           <div class="bl-table-divider"></div>
@@ -36,7 +36,7 @@
         <td><a href="javascript:;">Joe Black</a></td>
         <td>32</td>
         <td>Sidney No. 1 Lake Park</td>
-        <td><span class="bl-tag bl-tag-solid-deepskyblue">cool</span><span class="bl-tag bl-tag-solid-deepskyblue">teacher</span></td>
+        <td><span class="bl-tag bl-tag-info bl-tag-outline">cool</span><span class="bl-tag bl-tag-info bl-tag-outline">teacher</span></td>
         <td>
           <a href="javascript:;">edit</a>
           <div class="bl-table-divider"></div>

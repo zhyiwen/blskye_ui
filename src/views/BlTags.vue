@@ -20,10 +20,14 @@
     <span class="bl-tag bl-tag-circle bl-tag-warning">标签</span>
     <span class="bl-tag bl-tag-circle bl-tag-danger">标签</span>
     <span class="bl-tag bl-tag-circle bl-tag-info">标签</span>
+    <div class="switch">
+      <input type="checkbox">
+      <label>夜间模式</label>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
-.bl-tag{
+.bl-tag {
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 5px;
