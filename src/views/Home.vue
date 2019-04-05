@@ -1,7 +1,7 @@
 <template>
-  <div class="bl-container">
+  <div class="bl-container-fluid">
     <div class="row">
-      <div class="col-6">
+      <div class="col-12">
         <div class="bl-panel">
           <div class="bl-panel-head">折线图</div>
           <div class="bl-panel-body">
@@ -12,7 +12,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-12">
         <div class="bl-panel">
           <div class="bl-panel-head">柱状图</div>
           <div class="bl-panel-body">
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12">
+      <div class="col-24">
         <div class="bl-panel">
           <div class="bl-panel-head">数量</div>
           <div class="bl-panel-body">
