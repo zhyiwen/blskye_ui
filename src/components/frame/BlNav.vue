@@ -40,6 +40,9 @@
       <li>
         <router-link to="/todolist"><i class="fa fa-list-alt fa-fw"></i><span>todolist</span></router-link>
       </li>
+      <li>
+        <router-link to="/steps"><i class="fa fa-list-alt fa-fw"></i><span>步骤条</span></router-link>
+      </li>
     </ul>
   </div>
 </template>

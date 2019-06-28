@@ -11,6 +11,7 @@ import Timeline from './views/BlTimeline.vue'
 import Table from './views/BlTable.vue'
 import Input from './views/BlInput.vue'
 import Todolist from './views/BlTodolist.vue'
+import Steps from './views/BlSteps.vue'
 
 Vue.use(Router)
 
@@ -65,6 +66,11 @@ export default new Router({
       path: "/todolist",
       name: "todolist",
       component: Todolist
+    },
+    {
+      path: "/steps",
+      name: "steps",
+      component: Steps
     },
     {
       path: "/table",

@@ -1,0 +1,90 @@
+.bl-steps {
+  display: flex;
+  position: relative;
+  box-orient: horizontal;
+  box-direction: normal;
+  flex-direction: row;
+  box-pack: justify;
+  justify-content: space-between;
+  box-align: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  .bl-steps-content {
+    display: flex;
+    position: relative;
+    box-orient: horizontal;
+    box-direction: normal;
+    flex-direction: row;
+    box-pack: justify;
+    justify-content: space-between;
+    box-align: center;
+    align-items: center;
+    width: 100%;
+    .bl-step-item {
+      display: block;
+      position: relative;
+      bottom: calc(100% + 1em);
+      height: 8px;
+      width: 8px;
+      margin: 0 2em;
+      box-sizing: content-box;
+      color: #727cf5;
+      background-color: currentColor;
+      border: 0.25em solid #fafbfe;
+      border-radius: 50%;
+      z-index: 5;
+      span {
+        position: absolute;
+        top: calc(100% + 1em);
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        color: #adb5bd;
+      }
+      &.current {
+        span {
+          color: #727cf5;
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 47.5%;
+          left: 51%;
+          padding: 1em;
+          background-color: currentColor;
+          border-radius: 50%;
+          opacity: 0;
+          z-index: -1;
+          animation-name: animation-steps-current;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-out;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+        color: #0acf97;
+      }
+    }
+  }
+  .bl-process-line {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 0.2em;
+    background-color: #727cf5;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background-color: #e3eaef;
+  }
+}

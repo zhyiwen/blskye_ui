@@ -26,6 +26,7 @@
               {{item}}
             </label>
           </div>
+          
         </li>
       </ul>
     </div>
