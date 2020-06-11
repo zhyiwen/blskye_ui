@@ -6,6 +6,7 @@
   color: #353535;
   font-size: .8rem;
   .bl-panel-head {
+    position: relative;
     padding: 8px 15px;
     border-bottom: 1px solid #ddd;
     border-top-left-radius: 4px;
@@ -17,9 +18,11 @@
     }
   }
   .bl-panel-body {
+    position: relative;
     padding: 15px;
   }
   .bl-panel-foot {
+    position: relative;
     padding: 10px 15px;
     background-color: #f5f5f5;
     border-top: 1px solid #ddd;
