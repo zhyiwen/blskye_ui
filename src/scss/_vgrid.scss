@@ -1,3 +1,59 @@
-$prefix-row: 'vbl-row';
-$prefix-col: 'vbl-col';
-$grid-columns: 24;
+//reset css style
+@mixin resetCSS{
+	margin:0;
+	padding:0;
+}
+//clear float
+@mixin clearFix{
+	content:"";
+	display:table;
+	clear:both;
+}
+@mixin colStyle{
+	box-sizing:border-box;
+	float: left;
+}
+
+html,body{
+	@include resetCSS;
+}
+.vbl-row:before,.vbl-row:after{
+	@include clearFix;
+}
+.vbl-col{
+    @include colStyle;
+}
+
+@for $num from 1 through 24{
+	.row-#{$num}{
+		@for $i from 1 through $num{
+			.col-#{$i}{
+				width:(100% / $num * $i);
+			}
+		}
+	}	
+}
+
+//generate Grid
+@mixin generateGrid($media){
+	@for $num from 1 through 24{
+		.row-#{$num}{
+			@for $i from 1 through $num{
+				.col-#{$media}-#{$i}{
+					width:(100% / $num * $i);
+				}
+			}
+		}
+	}
+}
+
+@include generateGrid(xs);
+@media (min-width:768px){
+	@include generateGrid(sm);
+}
+@media (min-width:992px){
+	@include generateGrid(md);
+}
+@media (min-width:1200px){
+	@include generateGrid(lg);
+}
