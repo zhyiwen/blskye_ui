@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Home from './views/Home2.vue'
 import Grid from './views/BlGrid.vue'
 import Text from './views/BlText.vue'
 import Btn from './views/BlBtn.vue'
