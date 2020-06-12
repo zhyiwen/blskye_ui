@@ -9,8 +9,12 @@
       sm ? 'col-sm-' + sm : '',
       md ? 'col-md-' + md : '',
       lg ? 'col-lg-' + lg : '',
+      offset ? 'col-offset-' + offset : '',
+      offsetxs ? 'col-offset-xs-' + offsetxs : '',
+      offsetsm ? 'col-offset-sm-' + offsetsm : '',
+      offsetmd ? 'col-offset-md-' + offsetmd : '',
+      offsetlg ? 'col-offset-lg-' + offsetlg : '',
     ]"
-    :style="styles"
   >
     <slot></slot>
   </div>
@@ -26,12 +30,17 @@ export default {
     sm: [Number, Object],
     md: [Number, Object],
     lg: [Number, Object],
+    offset: Number,
+    offsetxs: [Number, Object],
+    offsetsm: [Number, Object],
+    offsetmd: [Number, Object],
+    offsetlg: [Number, Object],
   },
-  data() {
-    return {
-      gutter: 0,
-    };
-  },
+  // data() {
+  //   return {
+  //     gutter: 0,
+  //   };
+  // },
   mounted: function() {
     var vm = this;
     // 用$on事件来接收参数

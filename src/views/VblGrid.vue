@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vbl-row :gutter="30">
+    <vbl-row>
       <vbl-col :xs="24" :sm="12" :md="8" :lg="4">
         <div class="demo"></div>
       </vbl-col>
@@ -18,7 +18,7 @@
       </vbl-col>
     </vbl-row>
     <vbl-row :num="10" :gutter="10">
-      <vbl-col :xs="5" :sm="3" :md="2" :lg="1">
+      <vbl-col :xs="5" :offsetxs="5" :sm="3" :offsetsm="2" :md="2" :offsetmd="2" :lg="1" :offsetlg="4">
         <div class="demo"></div>
       </vbl-col>
       <vbl-col :xs="5" :sm="2" :md="2" :lg="4">
@@ -31,6 +31,14 @@
         <div class="demo"></div>
       </vbl-col>
       <vbl-col :xs="5" :sm="1" :md="2" :lg="2">
+        <div class="demo"></div>
+      </vbl-col>
+    </vbl-row>
+    <vbl-row :num="10" :gutter="10">
+      <vbl-col :span="5">
+        <div class="demo"></div>
+      </vbl-col>
+      <vbl-col :span="3" :offset="2">
         <div class="demo"></div>
       </vbl-col>
     </vbl-row>

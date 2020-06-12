@@ -1,59 +1,99 @@
 //reset css style
-@mixin resetCSS{
-	margin:0;
-	padding:0;
+@mixin resetCSS {
+  margin: 0;
+  padding: 0;
 }
 //clear float
-@mixin clearFix{
-	content:"";
-	display:table;
-	clear:both;
+@mixin clearFix {
+  content: "";
+  display: table;
+  clear: both;
 }
-@mixin colStyle{
-	box-sizing:border-box;
-	float: left;
-}
-
-html,body{
-	@include resetCSS;
-}
-.vbl-row:before,.vbl-row:after{
-	@include clearFix;
-}
-.vbl-col{
-    @include colStyle;
+@mixin colStyle {
+  box-sizing: border-box;
+  float: left;
 }
 
-@for $num from 1 through 24{
-	.row-#{$num}{
-		@for $i from 1 through $num{
-			.col-#{$i}{
-				width:(100% / $num * $i);
-			}
-		}
-	}	
+html,
+body {
+  @include resetCSS;
+}
+.vbl-row:before,
+.vbl-row:after {
+  @include clearFix;
+}
+.vbl-col {
+  @include colStyle;
+}
+
+@for $num from 1 through 24 {
+  .row-#{$num} {
+    @for $i from 1 through $num {
+      .col-#{$i} {
+        width: (100% / $num * $i);
+      }
+    }
+  }
+  .row-#{$num} {
+    @for $i from 1 through $num {
+      .col-offset-#{$i} {
+        margin-left: (100% / $num * $i);
+      }
+    }
+  }
 }
 
 //generate Grid
-@mixin generateGrid($media){
-	@for $num from 1 through 24{
-		.row-#{$num}{
-			@for $i from 1 through $num{
-				.col-#{$media}-#{$i}{
-					width:(100% / $num * $i);
-				}
-			}
-		}
-	}
+@mixin generateGrid($media) {
+  @for $num from 1 through 24 {
+    .row-#{$num} {
+      @for $i from 1 through $num {
+        .col-#{$media}-#{$i} {
+          width: (100% / $num * $i);
+        }
+      }
+    }
+  }
+}
+
+//generate OffsetGrid
+@mixin generateOffsetGrid($media) {
+  @for $num from 1 through 24 {
+    .row-#{$num} {
+      @for $i from 1 through $num {
+        .col-offset-#{$media}-#{$i} {
+          margin-left: (100% / $num * $i);
+        }
+      }
+    }
+  }
 }
 
 @include generateGrid(xs);
-@media (min-width:768px){
-	@include generateGrid(sm);
+@include generateOffsetGrid(xs);
+@media (min-width: 768px) {
+  @include generateGrid(sm);
+  @include generateOffsetGrid(sm);
 }
-@media (min-width:992px){
-	@include generateGrid(md);
+@media (min-width: 992px) {
+  @include generateGrid(md);
+  @include generateOffsetGrid(md);
 }
-@media (min-width:1200px){
-	@include generateGrid(lg);
+@media (min-width: 1200px) {
+  @include generateGrid(lg);
+  @include generateOffsetGrid(lg);
+}
+
+// gutter
+$i: 0;
+@while $i<=30 {
+  .row-gutter-#{$i} {
+    margin-left: -#{$i/2}px;
+    margin-right: -#{$i/2}px;
+    .vbl-col {
+      padding-left: #{$i/2}px;
+      padding-right: #{$i/2}px;
+    }
+  }
+  $i: $i + 1;
 }

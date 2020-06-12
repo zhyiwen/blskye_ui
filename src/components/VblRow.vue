@@ -1,7 +1,10 @@
 /** * @author zhyiwen * @date 2020/6/10 9:46 * @version 1.0 */
 
 <template>
-  <div class="vbl-row" :class="'row-' + num" :style="styles">
+  <div class="vbl-row" :class="[
+  'row-' + num,
+  gutter ? 'row-gutter-' + gutter : ''
+  ]">
     <slot></slot>
   </div>
 </template>
@@ -11,10 +14,7 @@ import Bus from "@/utils/bus.js";
 export default {
   name: "VblRow",
   props: {
-    gutter: {
-      type: Number,
-      default: 0,
-    },
+    gutter: Number,
     num: {
       type: Number,
       default: 24,
