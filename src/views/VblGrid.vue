@@ -1,45 +1,42 @@
 <template>
   <div>
-    <vbl-row>
-      <vbl-col :xs="24" :sm="12" :md="8" :lg="4">
-        <div class="demo"></div>
+    <div>当前屏幕宽度：{{ screenWidth }}</div>
+    <vbl-row :num="12">
+      <vbl-col :xs="12" :sm="6" :md="3" :lg="1">
+        <div class="demo">1</div>
       </vbl-col>
-      <vbl-col :xs="24" :sm="12" :md="8" :lg="4">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">2</div>
       </vbl-col>
-      <vbl-col :xs="8" :sm="8" :md="8" :lg="4">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">3</div>
       </vbl-col>
-      <vbl-col :xs="16" :sm="4" :md="12" :lg="4">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">4</div>
       </vbl-col>
-      <vbl-col :xs="24" :sm="12" :md="12" :lg="4">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">5</div>
       </vbl-col>
-    </vbl-row>
-    <vbl-row :num="10" :gutter="10">
-      <vbl-col :xs="5" :offsetxs="5" :sm="3" :offsetsm="2" :md="2" :offsetmd="2" :lg="1" :offsetlg="4">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">6</div>
       </vbl-col>
-      <vbl-col :xs="5" :sm="2" :md="2" :lg="4">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">7</div>
       </vbl-col>
-      <vbl-col :xs="5" :sm="3" :md="2" :lg="1">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">8</div>
       </vbl-col>
-      <vbl-col :xs="5" :sm="1" :md="2" :lg="2">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">9</div>
       </vbl-col>
-      <vbl-col :xs="5" :sm="1" :md="2" :lg="2">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">10</div>
       </vbl-col>
-    </vbl-row>
-    <vbl-row :num="10" :gutter="10">
-      <vbl-col :span="5">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">11</div>
       </vbl-col>
-      <vbl-col :span="3" :offset="2">
-        <div class="demo"></div>
+      <vbl-col :xs="1" :sm="1" :md="1" :lg="1">
+        <div class="demo">12</div>
       </vbl-col>
     </vbl-row>
   </div>
@@ -49,18 +46,35 @@
 import vblRow from "@/components/VblRow.vue";
 import vblCol from "@/components/VblCol.vue";
 export default {
-  components:{
+  data() {
+    return {
+      screenWidth: "",
+    };
+  },
+  mounted() {
+    this.screenWidth = document.body.clientWidth;
+    window.onresize = () => {
+      return (() => {
+        this.screenWidth = document.body.clientWidth;
+      })();
+    };
+  },
+  components: {
     vblRow,
-    vblCol
-  }
-}
+    vblCol,
+  },
+};
 </script>
 
 <style scoped>
-.demo{
+.demo {
   height: 35px;
   background: #3091f2;
   margin-bottom: 10px;
   border: 1px solid #544485;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  margin-left: -1px;
 }
 </style>
