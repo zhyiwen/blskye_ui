@@ -7,28 +7,29 @@
 @mixin colStyle {
   box-sizing: border-box;
   float: left;
+  position: relative;
 }
 
 .gn-row:before,
 .gn-row:after {
   @include clearFix;
 }
-.gn-col {
-  @include colStyle;
-}
 
 @for $num from 1 through 24 {
   .gn-row-#{$num} {
     @for $i from 1 through $num {
       .gn-col-#{$i} {
+        @include colStyle;
         width: (100% / $num * $i);
       }
-    }
-  }
-  .gn-row-#{$num} {
-    @for $i from 1 through $num {
       .gn-col-offset-#{$i} {
         margin-left: (100% / $num * $i);
+      }
+      .gn-col-push-#{$i} {
+        left: (100% / $num * $i);
+      }
+      .gn-col-pull-#{$i} {
+        right: (100% / $num * $i);
       }
     }
   }
@@ -40,20 +41,17 @@
     .gn-row-#{$num} {
       @for $i from 1 through $num {
         .gn-col-#{$media}-#{$i} {
+          @include colStyle;
           width: (100% / $num * $i);
         }
-      }
-    }
-  }
-}
-
-//generate OffsetGrid
-@mixin generateOffsetGrid($media) {
-  @for $num from 1 through 24 {
-    .gn-row-#{$num} {
-      @for $i from 1 through $num {
         .gn-col-offset-#{$media}-#{$i} {
           margin-left: (100% / $num * $i);
+        }
+        .gn-col-push-#{$media}-#{$i} {
+          left: (100% / $num * $i);
+        }
+        .gn-col-pull-#{$media}-#{$i} {
+          right: (100% / $num * $i);
         }
       }
     }
@@ -61,18 +59,14 @@
 }
 
 @include generateGrid(xs);
-@include generateOffsetGrid(xs);
 @media (min-width: 768px) {
   @include generateGrid(sm);
-  @include generateOffsetGrid(sm);
 }
 @media (min-width: 992px) {
   @include generateGrid(md);
-  @include generateOffsetGrid(md);
 }
 @media (min-width: 1200px) {
   @include generateGrid(lg);
-  @include generateOffsetGrid(lg);
 }
 
 // gutter

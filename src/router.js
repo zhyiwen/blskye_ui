@@ -12,7 +12,8 @@ import Table from './views/BlTable.vue'
 import Input from './views/BlInput.vue'
 import Todolist from './views/BlTodolist.vue'
 import Steps from './views/BlSteps.vue'
-import vGrid from './views/VblGrid.vue'
+// import vGrid from './views/VblGrid.vue'
+import gnGrid from './views/GnGrid.vue'
 
 Vue.use(Router)
 
@@ -76,7 +77,7 @@ export default new Router({
     {
       path: "/v-grid",
       name: "v-grid",
-      component: vGrid
+      component: gnGrid
     },
     {
       path: "/table",

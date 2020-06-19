@@ -14,6 +14,16 @@
       offsetsm ? 'gn-col-offset-sm-' + offsetsm : '',
       offsetmd ? 'gn-col-offset-md-' + offsetmd : '',
       offsetlg ? 'gn-col-offset-lg-' + offsetlg : '',
+      push ? 'gn-col-push-' + push : '',
+      pushxs ? 'gn-col-push-xs-' + pushxs : '',
+      pushsm ? 'gn-col-push-sm-' + pushsm : '',
+      pushmd ? 'gn-col-push-md-' + pushmd : '',
+      pushlg ? 'gn-col-push-lg-' + pushlg : '',
+      pull ? 'gn-col-pull-' + pull : '',
+      pullxs ? 'gn-col-pull-xs-' + pullxs : '',
+      pullsm ? 'gn-col-pull-sm-' + pullsm : '',
+      pullmd ? 'gn-col-pull-md-' + pullmd : '',
+      pulllg ? 'gn-col-pull-lg-' + pulllg : '',
     ]"
   >
     <slot></slot>
@@ -33,7 +43,17 @@ export default {
         offsetxs: [Number, Object],
         offsetsm: [Number, Object],
         offsetmd: [Number, Object],
-        offsetlg: [Number, Object]
+        offsetlg: [Number, Object],
+        push: Number,
+        pushxs: [Number, Object],
+        pushsm: [Number, Object],
+        pushmd: [Number, Object],
+        pushlg: [Number, Object],
+        pull: Number,
+        pullxs: [Number, Object],
+        pullsm: [Number, Object],
+        pullmd: [Number, Object],
+        pulllg: [Number, Object],
 
     }
 };
