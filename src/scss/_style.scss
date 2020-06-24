@@ -1,0 +1,166 @@
+@mixin responsive-visibility($parent) {
+  #{$parent} {
+    display: block !important;
+  }
+  table#{$parent}  { display: table !important; }
+  tr#{$parent}     { display: table-row !important; }
+  th#{$parent},
+  td#{$parent}     { display: table-cell !important; }
+}
+
+// [converter] $parent hack
+@mixin responsive-invisibility($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+}
+
+@include responsive-invisibility('.gn-visible-xs');
+@include responsive-invisibility('.gn-visible-sm');
+@include responsive-invisibility('.gn-visible-md');
+@include responsive-invisibility('.gn-visible-lg');
+
+.gn-visible-xs-block,
+.gn-visible-xs-inline,
+.gn-visible-xs-inline-block,
+.gn-visible-sm-block,
+.gn-visible-sm-inline,
+.gn-visible-sm-inline-block,
+.gn-visible-md-block,
+.gn-visible-md-inline,
+.gn-visible-md-inline-block,
+.gn-visible-lg-block,
+.gn-visible-lg-inline,
+.gn-visible-lg-inline-block {
+  display: none !important;
+}
+
+@media (max-width: $screen-xs-max) {
+  @include responsive-visibility('.gn-visible-xs');
+}
+.gn-visible-xs-block {
+  @media (max-width: $screen-xs-max) {
+    display: block !important;
+  }
+}
+.gn-visible-xs-inline {
+  @media (max-width: $screen-xs-max) {
+    display: inline !important;
+  }
+}
+.gn-visible-xs-inline-block {
+  @media (max-width: $screen-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  @include responsive-visibility('.gn-visible-sm');
+}
+.gn-visible-sm-block {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: block !important;
+  }
+}
+.gn-visible-sm-inline {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: inline !important;
+  }
+}
+.gn-visible-sm-inline-block {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @include responsive-visibility('.gn-visible-md');
+}
+.gn-visible-md-block {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    display: block !important;
+  }
+}
+.gn-visible-md-inline {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    display: inline !important;
+  }
+}
+.gn-visible-md-inline-block {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  @include responsive-visibility('.gn-visible-lg');
+}
+.gn-visible-lg-block {
+  @media (min-width: $screen-lg-min) {
+    display: block !important;
+  }
+}
+.gn-visible-lg-inline {
+  @media (min-width: $screen-lg-min) {
+    display: inline !important;
+  }
+}
+.gn-visible-lg-inline-block {
+  @media (min-width: $screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  @include responsive-invisibility('.hidden-xs');
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  @include responsive-invisibility('.hidden-sm');
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @include responsive-invisibility('.hidden-md');
+}
+
+@media (min-width: $screen-lg-min) {
+  @include responsive-invisibility('.hidden-lg');
+}
+
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+
+// Note: Deprecated .gn-visible-print as of v3.2.0
+
+@include responsive-invisibility('.gn-visible-print');
+
+@media print {
+  @include responsive-visibility('.gn-visible-print');
+}
+.gn-visible-print-block {
+  display: none !important;
+
+  @media print {
+    display: block !important;
+  }
+}
+.gn-visible-print-inline {
+  display: none !important;
+
+  @media print {
+    display: inline !important;
+  }
+}
+.gn-visible-print-inline-block {
+  display: none !important;
+
+  @media print {
+    display: inline-block !important;
+  }
+}
+
+@media print {
+  @include responsive-invisibility('.hidden-print');
+}

@@ -44,6 +44,11 @@
       <gn-col :md="9" :pushmd="3"><div class="demo">前</div></gn-col>
       <gn-col :md="3" :pullmd="9"><div class="demo">后</div></gn-col>
     </gn-row>
+
+    <div class="demo gn-visible-xs-block">超小屏幕可见</div>
+    <div class="demo gn-visible-sm-inline">小屏幕可见</div>
+    <div class="demo hidden-sm">小屏幕隐藏</div>
+    <div class="demo hidden-lg">大屏幕隐藏</div>
   </div>
 </template>
 
